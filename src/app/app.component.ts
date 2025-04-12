@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '../app/header/header.component';
 import { UserComponent } from './user/user.component';
+import { DUMMY_USERS } from './dummy-users';
 
 @Component({
   selector: 'app-root',
@@ -11,5 +12,9 @@ import { UserComponent } from './user/user.component';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'first-app';
+  users = DUMMY_USERS;
+
+  onSelectUser(id: string) {
+    console.log(id);
+  }
 }
